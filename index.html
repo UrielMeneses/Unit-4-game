@@ -10,82 +10,45 @@
     <!-- Linking Google font -->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Linking Style and Reset -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <!-- Linking javascript -->
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
-     <!-- the select player character screen -->
-     <div id="firstScreen" class="container-fluid animated zoomIn bounceOut">
-        <img class="img-fluid" src="assets/images/mortal-kombat-logo.jpg" style="size: 1536px 864px" alt="mortal kombat logo" />
-        <br>
-        <br>
-        <h1>Choose wisely:</h1>
-        <br>
-        <div id="game" class="ctr container card-deck">
+<div class="contaier">
+        <p class="header">Number to Guess: 
+            <span id="numberToGuess"></span>
+        </p>
+        
+        <div class="row">
+                <div class="col-md-2 crystal" value="1" id ="crystalOne">
+                    <img src="assets/images/diamond.jpg" height="150px 150px" alt=" crystle"/>
+                </div>
+                <div class = "col-md-2 crystal" value="2" id = "crystalTwo">
+                    <img src="assets/images/sapphire.jpg" height="150px 150px" alt=" crystal" />
+                </div>
+                <div class = "col-md-2 crystal" value="3" id = "crystalThree">
+                    <img src="assets/images/ruby.jpg" height="150px 150px" alt=" crystal" />
+                </div>
+                <div class = "col-md-2 crystal" value="4" id = "crystalFour">
+                    <img src="assets/images/amethyst-black.jpg" height="150px 150px alt=" crystal" />
+                </div>
+        </div>
+
+        <p class="header-2">Your total score is: <span id = "totalScore"></span></p>
+        
+        <aside>
             
-        </div>
-    </div>
-    <!-- the main game screen -->
-    <div id="secondScreen" class="bg-trans container-fluid animated slideInDown">
-        <div class="row">
-            <div class="col-12 ctr">
-                Enemies remaining:
-                <div id="defendersLeftDiv"></div>
-            </div>
-        </div>
-        <div class="row text-center paddingTop">
-            <div class="col-5">
-                Player:
-                <div class="container" style="width: 30%;">
-                    <div id="playerDiv"></div>
-                    <div id="playerHealthDiv"></div>
-                </div>
-            </div>
-            <div class="col-2 paddingTop">
-                <!-- VS. -->
-                <!-- Image Place Holder -->
-                <img src="#" alt="VS" width="100" />
-            </div>
-            <div class="col-5">
-                Enemy:
-                <div class="container">
-                    <div id="defenderDiv"></div>
-                    <div id="defenderHealthDiv"></div>
-                </div>
-            </div>
-        </div>
-        <!-- holds the button -->
-        <div class="row">
-            <div class="col-12 btn">
-                <div id="msg"></div>
-                <br>
-                <button type="button" name="attack" id="attackBtn" class="btn btn-dark btn-lg">ATTACK!</button>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid ">
-        <div id="globalMsg" class="animated fadeInUp">
-            <p class="shadow">
-                CONGRATULATIONS!
-                <br> You saved the galaxy.
-            </p>
-        </div>
-    </div>
-    <footer>
-        Created by
-        <!-- Image Place Holder -->
-        <img src="#" width="25px" alt="#" /> <!-- Input Name Here -->
-    </footer>
-
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-        crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-        crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-        crossorigin="anonymous "></script>
+            <div id="playerStatus"></div>
+            <p id="score">Wins: <span id = "winCounter"></span></p>
+            <p id="score">Losses:<span id = "loseCounter"></span></p>
+            
+        </aside>
+        
+        
+        
+        <script src = "assets/javascript/game.js"></script> 
+</div>   
 </body>
 </html>
